@@ -1,74 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bushido Store - Lo mejor para tu entrenamiento</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/csc/styles.css" />
-  </head>
+</head>
 
-  <body>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="#"><img src="assets/img/logo.png" alt="Logo Bushido" /></a>
-        <p>Bushido Store</p>
-      </div>
-      <i class="fa-solid fa-bars fa-xl" style="color: #ffffff"></i>
-    </nav>
-    <section class="search">
-      <p>Ordenar por:</p>
-      <div class="dropdown">
-        <p>Precio</p>
-        <i class="fa-solid fa-angle-down"></i>
-      </div>
-    </section>
-    <main class="contenido">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="assets/img/articulo1.png" alt="Boken">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+<body>
+    <main class="main vh-100">
+        <!-- Comienzo Navbar -->
+        <nav class="navbar d-flex flex-row w-100 px-3 m-0">
+            <div class="logo d-flex flex-row align-items-center gap-3 m-0">
+                <a href="index.html"><img src="assets/img/logo.png" alt="Logo Bushido" /></a>
+                <div class="d-flex flex-column justify-content-start">
+                <p style="font-size: 22px;" class="text-white fw-bold">武士道 Bushido Store</p>
+                <p style="font-size: 14px;" class="text-white fw-medium"><small>Artes marciales - Coleccionables - Artículos deportivos</small></p>
+                </div>
             </div>
-          </div>
-          <div class="page_nav">
-            <div>
-                <p>«</p>
+            <i class="fa-solid fa-bars fa-xl" style="color: #ffffff"></i>
+        </nav>
+        <!-- Fin Navbar -->
+        <!-- Comienzo Barra de búsqueda -->
+        <section class="search d-flex flex-column w-100 justify-content-center align-items-center gap-3 m-0 px-3">
+            <p class="text-white fw-bold">Ordenar por:</p>
+            <div class="dropdown d-flex flex-row justify-content-between">
+                <p>Precio</p>
+                <i class="fa-solid fa-angle-down p-0 m-0"></i>
             </div>
-            <div>
-                <p>1</p>
+        </section>
+        <!-- Fin Barra de búsqueda -->
+        <!-- Comienzo Aside-->
+            <aside class="aside">
+                <a href="index.html"><img src="assets/img/logo.png" alt="Logo Bushido" /></a>
+                <div class="texto_aside d-flex flex-row align-items-center gap-1">
+                    <p class="text-white fw-bold">武士道</p>
+                    <p class="text-white fw-bold">Bushido Store</p>
+                </div>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Catálogo</a></li>
+                    <li><a href="">Ofertas</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </aside>
+        <!-- Fin Aside-->
+        <!-- Comienzo Productos -->
+            <div class="producto d-flex flex-column justify-content-center align-items-center w-100 p-5 gap-4">
+                <div class="card justify-content-center gap-1 p-5">
+                    <img class="card-img-top py-2" src="assets/img/articulo1.png" alt="Boken" />
+                    <div class="card-body py-2 d-flex flex-column text-center justify-content-center gap-4">
+                        <h5 class="card-title p-0 m-0">Boken de práctica</h5>
+                        <p class="card-text fw-bold">Precio: $20.000</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+                <div class="page_nav d-flex flex-row h-auto">
+                    <div class="d-flex justify-content-center align-items-center w-100 h-100 p-0 m-0">
+                        <p class="fw-bold">«</p>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center w-100 h-100 p-0 m-0">
+                        <p class="fw-bold">1</p>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center w-100 h-100 p-0 m-0">
+                        <p class="fw-bold">2</p>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center w-100 h-100 p-0 m-0">
+                        <p class="fw-bold">3</p>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center w-100 h-100 p-0 m-0">
+                        <p class="fw-bold">»</p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p>2</p>
+        <!-- Fin Productos -->
+        <!-- Fin Contenido principal -->
+        <!-- Comienzo Footer -->
+        <footer class="footer d-flex flex-column align-items-center justify-content-center w-100 gap-4 p-5">
+            <div style="height: 3rem;" class="d-flex flex-row gap-3 py-1">
+                <i class="fa-brands fa-facebook fa-xl" style="color: #ffffff"></i>
+                <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff"></i>
+                <i class="fa-brands fa-behance fa-xl" style="color: #ffffff"></i>
             </div>
-            <div>
-                <p>3</p>
-            </div>
-            <div>
-                <p>»</p>
-            </div>
-          </div>
+            <p class="text-white">
+                © Bushido Store. <br>Todos los derechos reservados.
+            </p>
+        </footer>
+        <!-- Fin Footer -->
     </main>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/0e63edc376.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0e63edc376.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
