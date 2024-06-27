@@ -1,12 +1,16 @@
 /***** Generales *****/
 html {
   font-family: "Manrope", sans-serif;
+  height: 100%;
 }
 p,
 i,
 img {
   padding: 0;
   margin: 0;
+}
+body {
+  height: 100%;
 }
 ul {
   list-style: none;
@@ -27,17 +31,16 @@ a {
     "navbar"
     "search"
     "producto"
+    "menu_nav"
     "footer";
 }
 /*** Navbar ***/
 .navbar {
   grid-area: navbar;
   height: auto;
-  background-image: url(../img/banner.png);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: red;
+  background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .navbar i:hover {
   cursor: pointer;
@@ -50,25 +53,36 @@ a {
 .search {
   grid-area: search;
   height: auto;
-  background-color: #b76f7e;
+  background-color: rgba(183, 111, 126, 0.9);
 }
 .search p {
   font-size: 18px;
 }
 .dropdown {
   padding: 0.4rem 1rem 0.4rem 1rem;
-  align-items: center;
   background-color: white;
   width: 400px;
-  height: auto;
   border-radius: 0.2rem;
 }
-.dropdown p {
+.dropdown .btn {
+  width: 100%;
+  padding: 0;
+  background-color: white;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dropdown .btn:hover {
+  background-color: white;
+}
+.dropdown p, .dropdown .btn span {
   font-size: 16px;
 }
 .dropdown i:hover {
   cursor: pointer;
 }
+
 /*** Aside ***/
 .aside {
   background-color: red;
@@ -78,19 +92,21 @@ a {
 /*** Contenedor de productos ***/
 .producto {
   grid-area: producto;
-  background-image: url(../img/background.png);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   padding: 1rem 0 1rem 0;
+  background-color: lightgrey;
 }
 /*** Mockup de navegación ***/
+.menu_nav {
+  grid-area: menu_nav;
+  background-color: rgba(0, 0, 0, 0.9);
+}
 .page_nav {
-  width: 200px;
-  border: 2px solid black;
+  border: 2px solid white;
+  max-width: 200px;
 }
 .page_nav div {
-  border-right: 2px solid black;
+  border-right: 2px solid white;
+  width: 200px;
 }
 .page_nav div:last-of-type {
   border: none;
@@ -100,6 +116,7 @@ a {
 }
 .page_nav p {
   font-size: 18px;
+  color: white;
 }
 /*** Cards Container ***/
 .cards-container {
@@ -136,7 +153,7 @@ a {
 .footer {
   grid-area: footer;
   height: auto;
-  background-color: #b76f7e;
+  background-color: rgba(200, 0, 0, 0.6);
 }
 .footer i:hover {
   cursor: pointer;
@@ -145,6 +162,73 @@ a {
 /*** Tablet ***/
 @media only screen and (min-width: 576px) and (max-width: 991px) {
   /*** Cards container ***/
+  main {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80% !important;
+    grid-template-areas:
+      "aside aside aside aside"
+      "search producto producto producto"
+      "search menu_nav menu_nav menu_nav"
+      "footer footer footer footer" !important;
+  }
+  .navbar {
+    grid-area: none;
+    display: none !important;
+  }
+  .aside {
+    grid-area: aside;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    padding: 0.2rem;
+    align-items: center;
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100% !important;
+    height: auto;
+    gap: 5rem;
+  }
+  .texto_aside {
+    flex-direction: row !important;
+    font-size: 15px;
+    gap: 0;
+    text-align: center;
+  }
+  .aside ul {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+  .aside li {
+    padding: 0.5rem;
+    font-weight: bold;
+  }
+  .aside img {
+    width: 80px !important;
+  }
+  .search {
+    height: 100%;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding-top: 3rem;
+    background-color: rgba(183, 111, 126, 0.9);
+  }
+  .dropdown {
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    background-color: white;
+    width: auto;
+    min-width: 80px;
+    border-radius: 0.2rem;
+  }
+  .dropdown p {
+    font-size: 12px !important;
+  }
   .cards-container {
     height: auto;
     width: 100%;
@@ -152,7 +236,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     overflow: hidden;
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
     justify-items: center;
     align-items: center;
   }
@@ -180,6 +264,9 @@ a {
     gap: 0;
     padding: 0 !important;
   }
+  .footer {
+    background-color: rgba(200, 0, 0, 0.6);
+  }
 }
 /*** Desktop ***/
 @media only screen and (min-width: 992px) {
@@ -193,7 +280,7 @@ a {
       "aside search search search"
       "aside producto producto producto"
       "aside producto producto producto"
-      "footer producto producto producto" !important;
+      "footer menu_nav menu_nav menu_nav" !important;
   }
   /*** Navbar ***/
   .navbar {
@@ -208,14 +295,12 @@ a {
     justify-content: flex-start;
     padding-top: 2rem;
     align-items: center;
-    background-image: url(../img/banner.png);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: red;
     width: 100% !important;
     height: auto;
     gap: 1rem;
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .texto_aside {
     flex-direction: column !important;
@@ -241,16 +326,22 @@ a {
     gap: 1.5rem;
   }
   /*** Cards container ***/
+  .producto {
+    height: 100%;
+    overflow-y: scroll;
+  }
   .cards-container {
     display: grid;
+    overflow:scroll;
+    height: 100%;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     align-items: stretch;
     column-gap: 1rem;
     gap: 1rem;
-    padding: 0;
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 2rem;
   }
   .cards-container > *:nth-child(n + 2) {
     display: flex;
@@ -281,6 +372,7 @@ a {
     height: 100% !important;
     gap: 0 !important;
     padding-top: 0.5rem;
+    background-color: rgba(183, 111, 126, 0.9);
   }
   .dropdown {
     margin-bottom: 1rem;
@@ -291,5 +383,6 @@ a {
     padding: 1rem !important;
     gap: 0.5rem !important;
     text-align: center;
+    background-color: rgba(200, 0, 0, 0.6);
   }
 }

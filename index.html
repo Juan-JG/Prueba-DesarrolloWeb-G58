@@ -36,21 +36,28 @@
         <!-- Comienzo Barra de búsqueda -->
         <section class="search d-flex flex-column w-100 justify-content-center align-items-center gap-3 m-0 px-3">
             <p class="text-white fw-bold">Ordenar por:</p>
-            <div class="dropdown d-flex flex-row justify-content-between">
-                <p>Precio</p>
-                <i class="fa-solid fa-angle-down p-0 m-0"></i>
+            <div class="dropdown">
+                <button class="btn dropdown-toggle d-flex flex-row justify-content-between align-items-center"
+                    type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span>Categoría</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Precio</a></li>
+                    <li><a class="dropdown-item" href="#">Nombre</a></li>
+                    <li><a class="dropdown-item" href="#">Fecha</a></li>
+                </ul>
             </div>
         </section>
+
         <!-- Fin Barra de búsqueda -->
         <!-- Comienzo Aside-->
         <aside class="aside">
+            <div class="logo_bushido d-flex flex-column justify-content-center align-items-center">
             <a href="index.html"><img src="assets/img/logo.png" alt="Logo Bushido" /></a>
             <div class="texto_aside d-flex flex-row align-items-center gap-1">
                 <p class="text-white fw-bold">武士道</p>
                 <p class="text-white fw-bold">Bushido Store</p>
-                <p style="font-size: 14px" class="text-white fw-medium">
-                    <small>Artes marciales - Coleccionables - Artículos deportivos</small>
-                </p>
+            </div>
             </div>
             <ul>
                 <li><a href="">Inicio</a></li>
@@ -127,8 +134,42 @@
                         <a href="#" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
+                <div class="card justify-content-center gap-1 p-5">
+                    <img class="card-img-top py-2" src="assets/img/articulo9.png" alt="Boken" />
+                    <div class="card-body py-2 d-flex flex-column text-center justify-content-center gap-4">
+                        <h5 class="card-title p-0 m-0">Katana Swordfish</h5>
+                        <p class="card-text fw-bold">Precio: $110.000</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+                <div class="card justify-content-center gap-1 p-5">
+                    <img class="card-img-top py-2" src="assets/img/articulo10.png" alt="Boken" />
+                    <div class="card-body py-2 d-flex flex-column text-center justify-content-center gap-4">
+                        <h5 class="card-title p-0 m-0">Muñeo BJJ</h5>
+                        <p class="card-text fw-bold">Precio: $120.000</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+                <div class="card justify-content-center gap-1 p-5">
+                    <img class="card-img-top py-2" src="assets/img/articulo11.png" alt="Boken" />
+                    <div class="card-body py-2 d-flex flex-column text-center justify-content-center gap-4">
+                        <h5 class="card-title p-0 m-0">Cinta Negra TKD</h5>
+                        <p class="card-text fw-bold">Precio: $150.000</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+                <div class="card justify-content-center gap-1 p-5">
+                    <img class="card-img-top py-2" src="assets/img/articulo12.png" alt="Boken" />
+                    <div class="card-body py-2 d-flex flex-column text-center justify-content-center gap-4">
+                        <h5 class="card-title p-0 m-0">Katana Bushido</h5>
+                        <p class="card-text fw-bold">Precio: $200.000</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
             </div>
-            <div class="page_nav d-flex flex-row h-auto">
+        </div>
+        <div class="menu_nav d-flex flex-row h-auto justify-content-center align-items-center w-100 h-auto">
+            <div class="page_nav d-flex flex-row w-50 justify-content-center align-items-center">
                 <div class="d-flex justify-content-center align-items-center w-100 h-100 p-0 m-0">
                     <p class="fw-bold">«</p>
                 </div>
